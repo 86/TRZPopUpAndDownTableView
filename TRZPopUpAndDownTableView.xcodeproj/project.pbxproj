@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2856E68C194DE57500ED257B /* TRZPopUpAndDownAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2856E68B194DE57500ED257B /* TRZPopUpAndDownAnimator.swift */; };
 		28C04BA919488A6700013025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C04BA819488A6700013025 /* AppDelegate.swift */; };
-		28C04BAB19488A6700013025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C04BAA19488A6700013025 /* ViewController.swift */; };
 		28C04BAE19488A6700013025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28C04BAC19488A6700013025 /* Main.storyboard */; };
 		28C04BB019488A6700013025 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28C04BAF19488A6700013025 /* Images.xcassets */; };
 		28C04BBC19488A6700013025 /* TRZPopUpAndDownTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C04BBB19488A6700013025 /* TRZPopUpAndDownTableViewTests.swift */; };
+		28C04BC619488B6C00013025 /* TRZTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C04BC519488B6C00013025 /* TRZTableViewController.swift */; };
+		28C04BC81948BABC00013025 /* TRZPopUpAndDownTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C04BC71948BABC00013025 /* TRZPopUpAndDownTableView.swift */; };
+		28D2C775194B3EE100C18129 /* TRZPopUpAndDownContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D2C774194B3EE100C18129 /* TRZPopUpAndDownContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +28,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2856E68B194DE57500ED257B /* TRZPopUpAndDownAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRZPopUpAndDownAnimator.swift; sourceTree = "<group>"; };
 		28C04BA319488A6700013025 /* TRZPopUpAndDownTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRZPopUpAndDownTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C04BA719488A6700013025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28C04BA819488A6700013025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28C04BAA19488A6700013025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28C04BAD19488A6700013025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28C04BAF19488A6700013025 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		28C04BB519488A6700013025 /* TRZPopUpAndDownTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRZPopUpAndDownTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C04BBA19488A6700013025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28C04BBB19488A6700013025 /* TRZPopUpAndDownTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRZPopUpAndDownTableViewTests.swift; sourceTree = "<group>"; };
+		28C04BC519488B6C00013025 /* TRZTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRZTableViewController.swift; sourceTree = "<group>"; };
+		28C04BC71948BABC00013025 /* TRZPopUpAndDownTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRZPopUpAndDownTableView.swift; sourceTree = "<group>"; };
+		28D2C774194B3EE100C18129 /* TRZPopUpAndDownContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRZPopUpAndDownContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +81,12 @@
 		28C04BA519488A6700013025 /* TRZPopUpAndDownTableView */ = {
 			isa = PBXGroup;
 			children = (
-				28C04BA819488A6700013025 /* AppDelegate.swift */,
-				28C04BAA19488A6700013025 /* ViewController.swift */,
 				28C04BAC19488A6700013025 /* Main.storyboard */,
+				28C04BA819488A6700013025 /* AppDelegate.swift */,
+				28C04BC519488B6C00013025 /* TRZTableViewController.swift */,
+				28D2C774194B3EE100C18129 /* TRZPopUpAndDownContainer.swift */,
+				28C04BC71948BABC00013025 /* TRZPopUpAndDownTableView.swift */,
+				2856E68B194DE57500ED257B /* TRZPopUpAndDownAnimator.swift */,
 				28C04BAF19488A6700013025 /* Images.xcassets */,
 				28C04BA619488A6700013025 /* Supporting Files */,
 			);
@@ -208,8 +217,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28C04BAB19488A6700013025 /* ViewController.swift in Sources */,
+				28D2C775194B3EE100C18129 /* TRZPopUpAndDownContainer.swift in Sources */,
+				2856E68C194DE57500ED257B /* TRZPopUpAndDownAnimator.swift in Sources */,
+				28C04BC619488B6C00013025 /* TRZTableViewController.swift in Sources */,
 				28C04BA919488A6700013025 /* AppDelegate.swift in Sources */,
+				28C04BC81948BABC00013025 /* TRZPopUpAndDownTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -313,7 +325,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -397,6 +409,7 @@
 				28C04BC119488A6700013025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28C04BC219488A6700013025 /* Build configuration list for PBXNativeTarget "TRZPopUpAndDownTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +418,7 @@
 				28C04BC419488A6700013025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
