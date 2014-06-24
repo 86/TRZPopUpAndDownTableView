@@ -115,7 +115,8 @@ class TRZPopUpAndDownTableView: UITableViewController {
 
     func dismissModalView() {
                 NSLog("dismissModalView")
-        self.dismissViewControllerAnimated(true, completion:nil)
+//        self.dismissViewControllerAnimated(true, completion:nil)
+        self.presentingViewController.dismissViewControllerAnimated(true, completion:nil)
     }
     
 }

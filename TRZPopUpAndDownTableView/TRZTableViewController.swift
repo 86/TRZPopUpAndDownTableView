@@ -105,17 +105,21 @@ class TRZTableViewController: UITableViewController, UIViewControllerTransitioni
             NSLog("popTableViewSegue")
             let targetViewController : UIViewController = segue.destinationViewController as UIViewController;
             targetViewController.transitioningDelegate = self
-//            targetViewController.modalPresentationStyle = .Custom;
+//            targetViewController.modalPresentationStyle = .Custom
         }
     }
 
     
-    func animationControllerForPresentedController(presented: UIViewController!, presenting: UIViewController!, source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+    func animationControllerForPresentedController(presented: UIViewController!,
+        presentingController presenting: UIViewController!,
+        sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        NSLog("animationControllerForPresentedController")
         let transitioning = TRZPopUpAndDownAnimator()
         return transitioning
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        NSLog("animationControllerForDismissedController")
         let transitioning = TRZPopUpAndDownAnimator()
         transitioning.animateStyle = .DOWN
         return transitioning

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C22-JW-Dg2">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
         <!--Table View Controller - Root View Controller-->
         <scene sceneID="wdW-gB-LOO">
             <objects>
-                <tableViewController modalPresentationStyle="currentContext" id="rQk-HA-RpI" customClass="TRZTableViewController" customModule="TRZPopUpAndDownTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="rQk-HA-RpI" customClass="TRZTableViewController" customModule="TRZPopUpAndDownTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GUK-ex-pMe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +79,7 @@
         <!--PopAndDownContainer-->
         <scene sceneID="gxX-3g-fQL">
             <objects>
-                <viewController modalPresentationStyle="currentContext" id="cfq-2Y-E8S" userLabel="PopAndDownContainer" customClass="TRZPopUpAndDownContainer" customModule="TRZPopUpAndDownTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cfq-2Y-E8S" userLabel="PopAndDownContainer" customClass="TRZPopUpAndDownContainer" customModule="TRZPopUpAndDownTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KRx-7F-zoP"/>
                         <viewControllerLayoutGuide type="bottom" id="ar2-Yv-O0M"/>
@@ -128,7 +129,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MTC-o5-9nP">
             <objects>
-                <navigationController modalPresentationStyle="currentContext" id="C22-JW-Dg2" sceneMemberID="viewController">
+                <navigationController id="C22-JW-Dg2" sceneMemberID="viewController">
                     <size key="freeformSize" width="320" height="568"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YP2-4z-TZF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
