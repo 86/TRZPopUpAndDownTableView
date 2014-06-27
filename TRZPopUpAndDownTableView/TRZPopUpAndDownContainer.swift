@@ -8,10 +8,16 @@
 
 import UIKit
 
-class TRZPopUpAndDownContainer: UIViewController {
+protocol TRZPopUpAndDownTableViewDelegate {
+    // protocol definition goes here
+    func dimissPopUpAndDownTableView(sender: AnyObject)
+}
 
+class TRZPopUpAndDownContainer: UIViewController {
+    
     @IBOutlet var containerView : UIView
     @IBOutlet var tapOuter : UITapGestureRecognizer = nil
+    var delegate :TRZPopUpAndDownTableViewDelegate?
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -59,7 +65,9 @@ class TRZPopUpAndDownContainer: UIViewController {
     func triggerdTapGesture() {
         let p:CGPoint = tapOuter.locationInView(self.view)
         if !CGRectContainsPoint(containerView.frame, p) {
-            dismissModalView()
+//            dismissModalView()
+            NSLog("dimissPopUpAndDownTableView")
+            self.delegate?.dimissPopUpAndDownTableView(self)
         }
     }
     
@@ -67,6 +75,7 @@ class TRZPopUpAndDownContainer: UIViewController {
         NSLog("dismissModalView")
 //        self.dismissViewControllerAnimated(true, completion:nil)
         self.presentingViewController.dismissViewControllerAnimated(true, completion:nil)
+        NSLog("presentingViewController:%@", self.presentingViewController)
     }
 
 }

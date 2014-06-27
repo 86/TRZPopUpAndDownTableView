@@ -25,34 +25,29 @@ class TRZPopUpAndDownAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         let container: UIView = transitionContext.containerView()
         
-        if self.animateStyle == .DOWN {
-            NSLog("animateStyle.DOWN")
-            container.insertSubview(toViewController.view, belowSubview:fromViewController.view)
-//            toViewController.view.transform = CGAffineTransformMakeScale(1.0, 1.0)
-//            toViewController.view.alpha = 1.0
-        } else {
+        if self.animateStyle == .UP {
             NSLog("animateStyle.UP")
             toViewController.view.transform = CGAffineTransformMakeScale(0.5, 0.5)
             toViewController.view.alpha = 0.0
             container.addSubview(toViewController.view)
+        } else {
+            NSLog("animateStyle.DOWN")
+            container.insertSubview(toViewController.view, belowSubview: fromViewController.view)
         }
         
         UIView.animateWithDuration(duration, animations: { () -> Void in
-            if self.animateStyle == .DOWN {
+            if self.animateStyle == .UP {
+                NSLog("animateStyle.UP")
+                toViewController.view.transform = CGAffineTransformIdentity
+                toViewController.view.alpha = 1.0
+            } else {
                 NSLog("animateStyle.DOWN")
                 fromViewController.view.transform = CGAffineTransformMakeScale(0.5, 0.5)
                 fromViewController.view.alpha = 0.0
-//                toViewController.view.transform = CGAffineTransformIdentity
-//                toViewController.view.alpha = 1.0
-            } else {
-                NSLog("animateStyle.UP")
-//                fromViewController.view.transform = CGAffineTransformMakeScale(0.2, 0.2)
-//                fromViewController.view.alpha = 0.0
-                toViewController.view.transform = CGAffineTransformIdentity
-                toViewController.view.alpha = 1.0
             }}
             , completion: { (finished: Bool) -> Void in
-                transitionContext.completeTransition(finished)
+                let completed: Bool = !transitionContext.transitionWasCancelled()
+                transitionContext.completeTransition(completed)
             })
     }
    

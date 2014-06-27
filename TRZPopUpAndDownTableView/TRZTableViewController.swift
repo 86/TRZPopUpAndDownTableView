@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TRZTableViewController: UITableViewController, UIViewControllerTransitioningDelegate {
+class TRZTableViewController: UITableViewController, UIViewControllerTransitioningDelegate, TRZPopUpAndDownTableViewDelegate {
     
     init(style: UITableViewStyle) {
         super.init(style: style)
@@ -103,9 +103,10 @@ class TRZTableViewController: UITableViewController, UIViewControllerTransitioni
         // Pass the selected object to the new view controller.
         if segue.identifier == "popTableView" {
             NSLog("popTableViewSegue")
-            let targetViewController : UIViewController = segue.destinationViewController as UIViewController;
+            let targetViewController: TRZPopUpAndDownContainer = segue.destinationViewController as TRZPopUpAndDownContainer
+            targetViewController.delegate = self
             targetViewController.transitioningDelegate = self
-//            targetViewController.modalPresentationStyle = .Custom
+            targetViewController.modalPresentationStyle = .Custom
         }
     }
 
@@ -123,6 +124,11 @@ class TRZTableViewController: UITableViewController, UIViewControllerTransitioni
         let transitioning = TRZPopUpAndDownAnimator()
         transitioning.animateStyle = .DOWN
         return transitioning
+    }
+    
+    func dimissPopUpAndDownTableView(sender: AnyObject) {
+        NSLog("VC:dismissViewControllerAnimated")
+        self.dismissViewControllerAnimated(true, completion:nil)
     }
 
 }
